@@ -1,0 +1,26 @@
+---
+
+# Use `defaults read` to dump out the current settings.
+
+- name: enable tap-to-click
+  sudo: yes
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+- name: enable display zooming
+  sudo: yes
+  command: defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+
+- name: set ctrl+shift+scroll to zoom
+  sudo: yes
+  command: defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 393216
+
+- name: show all filename extensions
+  sudo: yes
+  command: defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+- name: show the ~/Library folder
+  sudo: yes
+  command: chflags nohidden ~/Library
+
+# TODO:
+# - name: replace capslock with left ctrl

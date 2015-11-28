@@ -1,0 +1,67 @@
+---
+
+- name: install brews
+  homebrew:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - ansible
+    - autojump
+    - cowsay
+    - docker
+    - git
+    - hub
+    - irssi
+    - mongodb
+    - node012
+    - openssl
+    - tmate
+    - tmux
+    - zsh
+    - zsh-completions
+
+- name: install cask
+  homebrew:
+    name: caskroom/cask/brew-cask
+    state: present
+
+- name: install casks
+  homebrew_cask:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - asepsis
+    - clipmenu
+    - disk-inventory-x
+    - flux
+    - google-chrome
+    - heroku-toolbelt
+    - xquartz
+    - inkscape
+    - libreoffice
+    - little-snitch
+    - mou
+    - slack
+    - smartgit
+    - skype
+    - spotify
+    - sublime-text
+    - the-unarchiver
+    - transmission
+    - transmit
+    - virtualbox
+    - vlc
+
+- name: tap font cask
+  homebrew_tap:
+    tap: caskroom/fonts
+    state: present
+
+- name: install fonts
+  homebrew_cask:
+    name: "{{item}}"
+    state: present
+  with_items:
+    - font-source-sans-pro
+    - font-source-code-pro
+  ignore_errors: yes
