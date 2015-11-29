@@ -26,5 +26,13 @@
   sudo: yes
   command: defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+- name: set safari preferences
+  command: defaults write /Library/Preferences//com.apple.Safari {{ item }}
+  with_items:
+    - IncludeDevelopMenu -bool true
+    - WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+    - ShowStatusBar -bool true
+    - ShowFavoritesBar -bool no
+
 # TODO:
 # - name: replace capslock with left ctrl
