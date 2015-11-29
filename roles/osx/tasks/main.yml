@@ -3,3 +3,5 @@
 - include: install.yml
 
 - include: settings.yml
+
+- include: terminal.yml
