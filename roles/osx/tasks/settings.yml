@@ -22,5 +22,9 @@
   sudo: yes
   command: chflags nohidden ~/Library
 
+- name: click login screen clock to show IP address, hostname, OS version, etc.
+  sudo: yes
+  command: defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
 # TODO:
 # - name: replace capslock with left ctrl
