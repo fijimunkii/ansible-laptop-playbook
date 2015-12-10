@@ -5,6 +5,11 @@
     tap: homebrew/versions
     state: present
 
+- name: tap tmate
+  homebrew_tap:
+    tap: nviennot/tmate
+    state: present
+
 - name: install brews
   homebrew:
     name: "{{item}}"
