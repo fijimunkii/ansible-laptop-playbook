@@ -1,5 +1,10 @@
 ---
 
+- name: tap versions
+  homebrew_tap:
+    tap: homebrew/versions
+    state: present
+
 - name: install brews
   homebrew:
     name: "{{item}}"
