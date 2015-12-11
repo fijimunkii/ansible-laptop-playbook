@@ -1,0 +1,6 @@
+---
+- name: copy .zshrc
+  copy: src=roles/osx/files/.zshrc dest=~/.zshrc
+
+- name: set zsh as default shell
+  shell: chsh -s $(which zsh)

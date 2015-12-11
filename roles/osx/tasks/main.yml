@@ -7,3 +7,5 @@
 - include: terminal.yml
 
 - include: hub.yml
+
+- include: zsh.yml
