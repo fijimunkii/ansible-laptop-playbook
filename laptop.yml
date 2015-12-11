@@ -3,3 +3,7 @@
   connection: local
   roles:
     - { role: osx, when: ansible_distribution == "MacOSX" }
+  vars_prompt:
+    - name: "usersethostname"
+      prompt: "Set a hostname for this machine?"
+      private: no

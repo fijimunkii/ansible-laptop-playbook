@@ -38,5 +38,9 @@
     - ShowStatusBar -bool true
     - ShowFavoritesBar -bool no
 
+- name: set hostname
+  command: sudo scutil --set HostName {{ usersethostname }}
+  when: usersethostname is defined
+
 # TODO:
 # - name: replace capslock with left ctrl
