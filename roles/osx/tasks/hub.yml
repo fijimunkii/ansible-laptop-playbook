@@ -1,7 +1,0 @@
----
-- name: ensure bash_profile presence
-  ignore_errors: True
-  file: path=~/.bash_profile state=touch
-
-- name: add shim to bash
-  lineinfile: dest=~/.bash_profile regexp="hub" line="eval \"$(hub alias -s)\"" state=present

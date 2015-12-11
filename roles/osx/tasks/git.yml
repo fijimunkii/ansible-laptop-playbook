@@ -1,0 +1,6 @@
+---
+- name: copy .gitconfig
+  copy: src=roles/osx/files/.gitconfig dest=~/.gitconfig
+
+- name: copy .gitignore
+  copy: src=roles/osx/files/.gitignore dest=~/.gitignore

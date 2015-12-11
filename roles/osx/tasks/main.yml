@@ -6,7 +6,7 @@
 
 - include: terminal.yml
 
-- include: hub.yml
+- include: git.yml
 
 - include: zsh.yml
 
