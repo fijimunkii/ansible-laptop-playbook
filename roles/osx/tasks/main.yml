@@ -9,3 +9,5 @@
 - include: hub.yml
 
 - include: zsh.yml
+
+- include: vim.yml
