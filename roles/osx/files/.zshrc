@@ -56,7 +56,7 @@ PROMPT='
 $(prompt_user) at $(prompt_machine) in $(prompt_dir) $(git_prompt_info)
 $(virtualenv_info)$(prompt_char) '
 
-RPROMPT='$(battery_pct_remaining)'
+RPROMPT='$(battery_pct_remaining 2>/dev/null)'
 
 function precompile
 {
