@@ -40,7 +40,7 @@
 
 - name: set hostname
   command: sudo scutil --set HostName {{ usersethostname }}
-  when: usersethostname is defined
+  when: usersethostname and usersethostname.length != 0
 
 # TODO:
 # - name: replace capslock with left ctrl
