@@ -2,8 +2,5 @@
 - name: copy .vimrc
   copy: src=roles/osx/files/.vimrc dest=~/.vimrc
 
-- name: install vundle
-  git:
-    repo: https://github.com/VundleVim/Vundle.vim.git
-    dest: ~/.vim/bundle/Vundle.vim
-    update: yes
+- name: install plug
+  git: repo=ssh://git@github.com/junegunn/vim-plug.git dest=~/.vim/autoload/
