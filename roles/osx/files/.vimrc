@@ -14,6 +14,7 @@ Plug 'vim-scripts/ScrollColors'
 Plug 'mhinz/vim-startify'
 Plug 'sjl/gundo.vim'
 Plug 'itchyny/screensaver.vim'
+Plug 'octref/RootIgnore'
 "Plugin 'L9'
 "Plugin 'corntrace/bufexplorer'
 "Plugin 'Lokaltog/vim-easymotion'
@@ -80,36 +81,6 @@ nnoremap <C-f> :Ack
 nnoremap <C-z> :GundoToggle<CR>
 let g:gundo_preview_height = 22
 
-" semicolon / colon
-noremap ,c :cd ~/code<cr>
-noremap ; :
-noremap : ;
-
-" jj to escape
-inoremap jj <Esc>
-
-" kk to escape
-inoremap kk <Esc>
-
-" Super speed
-" Simply hold shift in command mode
-" And ctrl in insert mode
-" noremap H 15h
-" noremap J 15j
-" noremap K 15k
-" noremap L 15l
-inoremap <C-h> <Esc>i
-inoremap <C-j> <Esc>jli
-inoremap <C-k> <Esc>kli
-inoremap <C-l> <Esc>2li
-
-" space goes to insert mode
-nnoremap <Space> i
-
-" CTRL - & CTRL _ move lines around
-noremap <C--> ddp
-noremap <C-_> ddkkp
-
 " > and < indent and unindent
 nnoremap > >>
 nnoremap < <<
@@ -127,17 +98,9 @@ nnoremap <silent> <C-N> :se invhlsearch<CR>
 " Search as you type
 set incsearch
 
-" Ctrl-\ to run JSHint
-noremap <C-\> :JSHint<CR>
-inoremap <C-\> <Esc>:JSHint<CR>
-
 " Ctrl-T to toggle NerdTree
 noremap <C-t> :NERDTreeToggle<CR>
 inoremap <C-t> <Esc>:NERDTreeToggle<CR>
-
-" Switch between windows, maximizing the current window
-nnoremap <C-J> <C-W>j<C-W>_ 
-nnoremap <C-K> <C-W>k<C-W>_
 
 " Make the 81st column stand out
 highlight ColorColumn ctermbg=magenta
@@ -154,9 +117,6 @@ set relativenumber
 
 " Current marker postion
 set ruler
-
-" Ignore Files
-set wildignore+=*.swp
 
 " when used with vim -u, disable local .vimrc
 set nocompatible
