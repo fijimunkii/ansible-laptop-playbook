@@ -27,6 +27,7 @@
     - openssl
     - tmate
     - tmux
+    - vim
     - zsh
     - zsh-completions
 

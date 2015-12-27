@@ -60,6 +60,7 @@ set expandtab
 filetype plugin indent on
 
 " copy and paste
+set clipboard=unnamed
 set pastetoggle=<C-o>
 vnoremap <C-c> "+yi
 vnoremap <C-x> "+c
