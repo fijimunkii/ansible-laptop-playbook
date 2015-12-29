@@ -41,6 +41,9 @@ filetype plugin indent on
 let mapleader = ","
 let maplocalleader = "\\"
 
+" disable viminfo (vim action log file wtf)
+set viminfo=
+
 " fix for zshenv not working for :!
 set shell=zsh\ -i
 
