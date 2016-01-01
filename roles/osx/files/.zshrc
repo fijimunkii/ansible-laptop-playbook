@@ -60,23 +60,6 @@ $(virtualenv_info)$(prompt_char) '
 
 RPROMPT='$(battery_pct_remaining 2>/dev/null)'
 
-function precompile
-{
-    bundle exec rake assets:precompile; \
-      git add --all .; git commit -m $1;
-}
-
-function install
-{
-    if hash yum 2>/dev/null; then
-        sudo yum install $1; 
-    elif hash apt-get 2>/dev/null; then
-        sudo apt-get install $1;
-    elif hash brew 2>/dev/null; then
-        brew install $1;
-    fi
-}
-
 function passgen
 {
   if hash xclip 2>/dev/null; then
@@ -88,27 +71,9 @@ function passgen
   fi
 }
 
-function rakeitgood
-{
-  rake db:drop;rake db:create;rake db:migrate;rake db:migrate RAILS_ENV=test; \
-    rake db:seed; rake db:seed RAILS_ENV=test;
-}
-
-
-alias lyrics='sh ~/.config/pianobar/lyrics.sh'
-alias pushitgood='git push origin master; git push heroku master;'
-alias ll='ls -la'
 alias reload='source ~/.zshrc'
-alias pair='tmux new-session -s pair'
-alias mysql='/usr/local/Cellar/mysql/5.6.15/support-files/mysql.server start'
-alias sleep='osascript ~/Projects/automate/sleep.scpt'
-alias k='bundle exec kitchen'
-alias sasswatch='sass -w .:.'
-alias jailbreak='sudo xattr -rd com.apple.quarantine'
-alias viz='mpdviz -f /tmp/mpd.fifo -v lines -i true -d false'
 alias gap='git add --patch'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
-alias npmreboot='rm -rf node_modules && npm cache clean && npm install'
 alias i='npm install';
 alias t='npm test';
 alias s='npm start';
@@ -117,4 +82,3 @@ alias gco='git checkout';
 alias gcob='git checkout -b';
 alias emptytrash='sudo rm -Rf ~/.Trash/*';
 alias shrug='echo "¯\_(ツ)_/¯"';
-alias teatime='sleep 240 && say "tea time!"';
