@@ -36,6 +36,7 @@ Plug 'octref/RootIgnore'
 call plug#end()
 
 filetype plugin indent on
+syntax on
 
 " define mapleader
 let mapleader = ","
@@ -57,11 +58,9 @@ syntax on
 set synmaxcol=250
 
 " Indentation Settings
-set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
-filetype plugin indent on
 
 " copy and paste
 set clipboard=unnamed
