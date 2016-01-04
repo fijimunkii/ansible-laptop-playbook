@@ -7,3 +7,6 @@
     - name: "usersethostname"
       prompt: "Set a hostname for this machine?"
       private: no
+    - name: "upgradebrews"
+      prompt: "Ugrade brews?"
+      private: no

@@ -10,6 +10,10 @@
     tap: nviennot/tmate
     state: present
 
+- name: update and upgrade brews
+  homebrew: update_homebrew=yes upgrade_all=yes
+  when: upgradebrews and upgradebrews.length != 0
+
 - name: install brews
   homebrew:
     name: "{{item}}"
