@@ -24,6 +24,7 @@
     - cowsay
     - docker
     - git
+    - gpg
     - hub
     - irssi
     - mongodb
