@@ -25,6 +25,7 @@
     - docker
     - git
     - gpg
+    - gpg2
     - hub
     - irssi
     - mongodb
