@@ -51,7 +51,7 @@
   copy: src=roles/osx/files/kill_nsurlsessiond.sh dest=~/.kill_nsurlsessiond.sh mode=0777
 
 - name: run kill_nsurlsessiond on login
-  shell: osascript -e 'tell application "System Events" to make new login item at end of login items with properties {name:"killnsurlsessiond", path:"/Users/fijimunkii/.kill_nsurlsessiond.sh", hidden:true}'
+  shell: osascript -e 'tell application "System Events" to make new login item at end of login items with properties {name:"killnsurlsessiond", path:"./Users/fijimunkii/.kill_nsurlsessiond.sh", hidden:true}'
 
 # TODO:
 # - name: replace capslock with left ctrl
