@@ -14,7 +14,7 @@ plugins=(
 source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
-setopt CORRECT CORRECT_ALL
+setopt CORRECT
 COMPLETION_WAITING_DOTS=true
 DISABLE_UPDATE_PROMPT=true
 
