@@ -10,3 +10,4 @@
     - name: "upgradebrews"
       prompt: "Ugrade brews?"
       private: no
+      when: ansible_distribution == "MacOSX"

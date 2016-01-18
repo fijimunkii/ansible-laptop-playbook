@@ -1,0 +1,29 @@
+---
+- name: .irssi directory is present
+  file: dest=~/.irssi state=directory
+  register: irssidir
+
+- name: Modules directory is present
+  file: dest=~/.irssi/modules state=directory
+  register: irssimodules
+  when: irssidir|success
+
+- name: Scripts directory is present
+  file: dest=~/.irssi/scripts state=directory
+  register: irssiscripts
+  when: irssidir|success
+
+- name: Config file is present
+  template:
+    src: roles/osx/templates/irssi_config.j2
+    dest: ~/.irssi/config
+    force: true
+  when: irssidir|success
+
+- name: Theme file is present
+  copy: src=roles/osx/files/jokx.theme dest=~/.irssi/
+  when: irssidir|success
+
+- name: Autorun scripts are present
+  copy: src=roles/osx/files/irssi/scripts/autorun dest=~/.irssi/scripts directory_mode=true mode=0755
+  when: irssiscripts|success

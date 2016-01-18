@@ -19,4 +19,5 @@
     update: yes
 
 - name: set zsh as default shell
-  shell: chsh -s /usr/local/bin/zsh
+  command: chsh -s /usr/local/bin/zsh
+  sudo: true

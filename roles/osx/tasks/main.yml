@@ -11,3 +11,5 @@
 - include: zsh.yml
 
 - include: vim.yml
+
+- include: irssi.yml
