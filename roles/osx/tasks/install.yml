@@ -52,6 +52,7 @@
     - disk-inventory-x
     - flux
     - google-chrome
+    - gpgtools
     - heroku-toolbelt
     - xquartz
     - inkscape
