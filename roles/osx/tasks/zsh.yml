@@ -20,4 +20,3 @@
 
 - name: set zsh as default shell
   command: chsh -s /usr/local/bin/zsh
-  sudo: true
