@@ -5,11 +5,3 @@
 - include: settings.yml
 
 - include: terminal.yml
-
-- include: git.yml
-
-- include: zsh.yml
-
-- include: vim.yml
-
-- include: irssi.yml

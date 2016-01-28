@@ -1,6 +1,6 @@
 ---
 - name: copy .zshrc
-  copy: src=roles/osx/files/.zshrc dest=~/.zshrc
+  copy: src=.zshrc dest=~/.zshrc
 
 - name: Add zsh to /etc/shells
   lineinfile: dest=/etc/shells regexp="zsh" line="/usr/local/bin/zsh" state=present

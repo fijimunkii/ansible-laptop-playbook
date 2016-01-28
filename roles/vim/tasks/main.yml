@@ -1,6 +1,6 @@
 ---
 - name: copy .vimrc
-  copy: src=roles/osx/files/.vimrc dest=~/.vimrc
+  copy: src=.vimrc dest=~/.vimrc
 
 - name: install plug
   git: repo=ssh://git@github.com/junegunn/vim-plug.git dest=~/.vim/autoload/
