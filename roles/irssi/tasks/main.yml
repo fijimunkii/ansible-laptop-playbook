@@ -4,12 +4,12 @@
   register: irssidir
 
 - name: Modules directory is present
-  file: dest=~/.irssi/modules state=directory
+  file: dest=~/.irssi/modules state=directory mode=0755
   register: irssimodules
   when: irssidir|success
 
 - name: Scripts directory is present
-  file: dest=~/.irssi/scripts state=directory
+  file: dest=~/.irssi/scripts state=directory mode=0755
   register: irssiscripts
   when: irssidir|success
 

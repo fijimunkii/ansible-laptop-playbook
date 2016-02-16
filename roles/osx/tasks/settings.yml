@@ -30,17 +30,9 @@
   sudo: yes
   command: defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-- name: set safari preferences
-  command: defaults write /Library/Preferences//com.apple.Safari {{ item }}
-  with_items:
-    - IncludeDevelopMenu -bool true
-    - WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-    - ShowStatusBar -bool true
-    - ShowFavoritesBar -bool no
-
 - name: set hostname
   command: sudo scutil --set HostName {{ usersethostname }}
-  when: usersethostname and usersethostname.length != 0
+  when: usersethostname is defined
 
 - name: set dns
   command: networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
