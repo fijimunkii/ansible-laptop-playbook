@@ -48,6 +48,7 @@
     name: "{{item}}"
     state: present
   with_items:
+    - awareness
     - clipmenu
     - disk-inventory-x
     - flux
