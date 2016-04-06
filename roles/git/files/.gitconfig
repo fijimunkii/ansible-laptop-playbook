@@ -1,11 +1,12 @@
 [user]
-	name = Harrison Powers
-	email = fijimunkii@gmail.com
+  name = Harrison Powers
+  email = harrisonpowers@gmail.com
+  signingkey = F1136F54
 [core]
   editor = vim
   excludesfile = ~/.gitignore
 [push]
-	default = current
+  default = current
 [branch]
   autosetuprebase = always
 [alias]
@@ -23,3 +24,5 @@
   keepBackup = false
 [github]
   user = fijimunkii
+[commit]
+  gpgsign = true
