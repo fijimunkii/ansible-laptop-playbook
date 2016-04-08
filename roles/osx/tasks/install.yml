@@ -56,6 +56,7 @@
     - google-chrome
     - gpgtools
     - heroku-toolbelt
+    - java
     - xquartz
     - inkscape
     - libreoffice
