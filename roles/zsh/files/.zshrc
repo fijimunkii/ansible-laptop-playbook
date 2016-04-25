@@ -91,3 +91,5 @@ alias gcob='git checkout -b';
 alias emptytrash='sudo rm -Rf ~/.Trash/*';
 alias shrug='echo "¯\_(ツ)_/¯"';
 alias p='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend';
+
+export HOMEBREW_NO_ANALYTICS=1;

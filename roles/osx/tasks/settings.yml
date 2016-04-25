@@ -47,3 +47,15 @@
 
 # TODO:
 # - name: replace capslock with left ctrl
+- name: check global bowerrc exists
+  stat: path=~/.bowerrc
+  register: bowerrc
+
+- name: ensure global bowerrc exists
+  file: path=~/.bowerrc state=touch
+  when: not bowerrc.stat.exists
+
+- name: disable bower analytics
+  lineinfile: dest=~/.bowerrc regexp="{{ item.regexp }}" line="{{ item.line }}"
+  with_items:
+    - { regexp: "analytics", line: '{ "analytics": false }' }
