@@ -55,7 +55,7 @@
   file: path=~/.bowerrc state=touch
   when: not bowerrc.stat.exists
 
-- name: disable bower analytics
-  lineinfile: dest=~/.bowerrc regexp="{{ item.regexp }}" line="{{ item.line }}"
-  with_items:
-    - { regexp: "analytics", line: '{ "analytics": false }' }
+#- name: disable bower analytics
+#  lineinfile: dest=~/.bowerrc regexp="{{ item.regexp }}" line="{{ item.line }}"
+#  with_items:
+#    - { regexp: "analytics", line: "{ \"analytics\": false }" }
