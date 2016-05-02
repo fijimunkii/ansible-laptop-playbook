@@ -21,7 +21,6 @@
   with_items:
     - ansible
     - autojump
-    - cowsay
     - docker
     - git
     - gnupg21
