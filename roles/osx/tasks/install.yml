@@ -21,6 +21,7 @@
   with_items:
     - ansible
     - autojump
+    - cmatrix
     - docker
     - git
     - gnupg21
@@ -28,6 +29,7 @@
     - irssi
     - mongodb
     - node
+    - no-more-secrets
     - openssl
     - pass
     - tmate
