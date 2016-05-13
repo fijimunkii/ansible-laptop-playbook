@@ -22,6 +22,8 @@
     - ansible
     - autojump
     - cmatrix
+    - cowsay
+    - curl
     - docker
     - git
     - gnupg21
@@ -35,6 +37,7 @@
     - tmate
     - tmux
     - vim
+    - wget
     - zsh
     - zsh-completions
 
