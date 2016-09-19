@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 plugins=(
   brew brew-cask dirhistory torrent git git-remote-branch 
-  battery colored-man colorize
+  battery colored-man colorize pass
 )
 # cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
