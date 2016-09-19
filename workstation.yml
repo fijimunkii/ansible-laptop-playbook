@@ -2,11 +2,11 @@
 - hosts: localhost
   connection: local
   roles:
-    - { role: osx, when: ansible_distribution == "MacOSX" }
     - git
+    - zsh
+    - { role: osx, when: ansible_distribution == "MacOSX" }
     - irssi
     - vim
-    - zsh
   vars_prompt:
     - name: "usersethostname"
       prompt: "Set a hostname for this machine?"

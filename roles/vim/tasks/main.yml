@@ -1,6 +1,3 @@
 ---
 - name: copy .vimrc
   copy: src=.vimrc dest=~/.vimrc
-
-- name: install plug
-  git: repo=ssh://git@github.com/junegunn/vim-plug.git dest=~/.vim/autoload/

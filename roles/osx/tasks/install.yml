@@ -5,14 +5,8 @@
     tap: homebrew/versions
     state: present
 
-- name: tap tmate
-  homebrew_tap:
-    tap: nviennot/tmate
-    state: present
-
 - name: update and upgrade brews
   homebrew: update_homebrew=yes upgrade_all=yes
-  when: upgradebrews and upgradebrews.length != 0
 
 - name: install brews
   homebrew:
@@ -41,11 +35,6 @@
     - zsh
     - zsh-completions
 
-- name: install cask
-  homebrew:
-    name: caskroom/cask/brew-cask
-    state: present
-
 - name: install casks
   homebrew_cask:
     name: "{{item}}"
@@ -57,7 +46,6 @@
     - flux
     - google-chrome
     - gpgtools
-    - heroku-toolbelt
     - java
     - xquartz
     - inkscape
